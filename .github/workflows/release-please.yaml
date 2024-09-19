@@ -251,14 +251,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Create installation directory
         run: |
-          mkdir -p ./installer
-          cp ./compose.yaml ./installer
-          cp ./site/Caddyfile ./installer
-          cp -r ./scripts ./installer
-          cp ./.env.template ./installer
+          mkdir -p ./HomePortal
+          cp ./compose.yaml ./HomePortal
+          cp ./site/examples/Caddyfile ./HomePortal/site/Caddyfile
+          cp -r ./scripts ./HomePortal
+          cp ./.env.template ./HomePortal
       - name: Create installer zip
         run: |
-          zip -r HomePortal.zip ./installer
+          zip -r HomePortal.zip ./HomePortal
       - name: Upload installer zip
         run: |
           gh release upload ${{ needs.release-please.outputs.tag_name }} HomePortal.zip

@@ -42,7 +42,7 @@ services:
 
   home-portal-admin:
     container_name: hp-admin
-    image: ghcr.io/evanlab02/hp-admin:v0.1.5
+    image: ghcr.io/evanlab02/hp-admin:v0.1.1
     env_file:
       - .env
     depends_on:
@@ -60,7 +60,7 @@ services:
 
   home-portal-api:
     container_name: hp-api
-    image: ghcr.io/evanlab02/hp-api:v0.1.5
+    image: ghcr.io/evanlab02/hp-api:v0.1.1
     env_file:
       - .env
     depends_on:
@@ -77,7 +77,7 @@ services:
 
   home-portal-site:
     container_name: hp-site
-    image: ghcr.io/evanlab02/hp-site:v0.1.5
+    image: ghcr.io/evanlab02/hp-site:v0.1.1
     env_file:
       - .env
     restart: always
