@@ -1,0 +1,12 @@
+"""Configuration for pytest."""
+
+from os import environ
+
+environ["TESTS_ENVIRONMENT"] = "True"
+environ["HP_API_DJANGO_KEY"] = "TESTING_HP_API_DJANGO_KEY"
+environ["HP_API_DJANGO_HOST"] = "TESTING_HP_API_DJANGO_HOST"
+environ["HP_API_DATABASE_PASSWORD"] = "TESTING_HP_API_DATABASE_PASSWORD"
+environ["HP_API_DB_HOST"] = "TESTING_HP_API_DB_HOST"
+environ["DEV_HP_API_DATABASE_PASSWORD"] = "TESTING_DEV_HP_API_DATABASE_PASSWORD"
+environ["DEV_HP_API_DB_HOST"] = "TESTING_DEV_HP_API_DB_HOST"
+environ["DJANGO_SETTINGS_MODULE"] = "hub.dev.test_settings"

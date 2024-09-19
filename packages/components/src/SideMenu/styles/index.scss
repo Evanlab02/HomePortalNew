@@ -1,0 +1,18 @@
+.ant-menu-vertical {
+    border: 2px solid #4096ff !important;
+    border-left: 0 !important;
+    border-top: 0 !important;
+    height: 100% !important;
+}
+
+.ant-menu-inline {
+    border: 2px solid #4096ff !important;
+    border-left: 0 !important;
+    border-top: 0;
+    height: 100%;
+    width: 300px;
+}
+
+.ant-menu-inline-collapsed {
+    height: 100%;
+}

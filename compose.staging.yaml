@@ -1,0 +1,112 @@
+services:
+  staging-home-portal-postgres-16:
+    container_name: hp-postgres-16
+    image: postgres:16.2-alpine3.18
+    environment:
+      POSTGRES_USER: postgres
+    env_file:
+      - .env.staging
+    volumes:
+      - staging-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: always
+    networks:
+      - staging-home-portal-network
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4096M
+
+  staging-home-portal-pgadmin-8:
+    container_name: hp-pgadmin-8
+    image: dpage/pgadmin4:8.5
+    restart: always
+    env_file:
+      - .env.staging
+    environment:
+      - SCRIPT_NAME=/pgadmin
+    networks:
+      - staging-home-portal-network
+    volumes:
+      - staging-pgadmin-data:/var/lib/pgadmin
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 4096M
+
+  staging-home-portal-admin:
+    container_name: hp-admin
+    build:
+      context: .
+      dockerfile: docker/admin/Dockerfile
+    env_file:
+      - .env.staging
+    depends_on:
+      staging-home-portal-postgres-16:
+        condition: service_healthy
+    restart: always
+    networks:
+      - staging-home-portal-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1024M
+    command: "/bin/bash -c 'python manage.py migrate && uvicorn hub.admin.asgi:application --host 0.0.0.0 --port 80 --workers 1'"
+
+  staging-home-portal-api:
+    container_name: hp-api
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    env_file:
+      - .env.staging
+    depends_on:
+      staging-home-portal-postgres-16:
+        condition: service_healthy
+    restart: always
+    networks:
+      - staging-home-portal-network
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4096M
+
+  staging-home-portal-site:
+    container_name: hp-site
+    build:
+      context: .
+      dockerfile: docker/site/Dockerfile
+    env_file:
+      - .env.staging
+    restart: always
+    expose:
+      - 80
+    ports:
+      - "80:80"
+    networks:
+      - staging-home-portal-network
+    volumes:
+      - ./site/Caddyfile:/etc/caddy/Caddyfile
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4096M
+
+volumes:
+  staging-postgres-data:
+    external: false
+  staging-pgadmin-data:
+    external: false
+
+networks:
+  staging-home-portal-network:
+    driver: bridge

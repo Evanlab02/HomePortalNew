@@ -1,0 +1,13 @@
+.home-portal-app {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: scroll;
+
+    .home-portal-content {
+        width: 100%;
+        color: white;
+        height: 100%;
+    }
+}

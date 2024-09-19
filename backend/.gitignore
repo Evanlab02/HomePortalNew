@@ -1,0 +1,4 @@
+coverage.xml
+htmlcov
+debug.log
+db.sqlite3

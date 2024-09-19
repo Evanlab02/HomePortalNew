@@ -1,0 +1,66 @@
+name: Backend Checks
+
+on:
+  pull_request:
+    branches: [trunk]
+  push:
+    branches: [trunk]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: ./backend
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.5'
+        cache: 'pip'
+    - name: Load .env file
+      uses: aarcangeli/load-dotenv@v1.0.0
+      with:
+        path: "./backend"
+        filenames: |
+          .env.template
+        quiet: false
+        if-file-not-found: error
+    - name: Setup
+      run: |
+        pip install -r requirements.dev.txt
+    - name: Run tests
+      run: |
+        pytest . --cov=. --no-cov-on-fail --cov-report term-missing
+        coverage xml
+        coverage html
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.5'
+        cache: 'pip'
+    - name: Load .env file
+      uses: aarcangeli/load-dotenv@v1.0.0
+      with:
+        path: "./backend"
+        filenames: |
+          .env.template
+        quiet: false
+        if-file-not-found: error
+    - name: Setup
+      run: |
+        pip install -r requirements.dev.txt
+    - name: Linting
+      run: |
+        black --check .
+        isort . --check-only --profile black
+        flake8 . --max-line-length=100
+        mypy . --strict

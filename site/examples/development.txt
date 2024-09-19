@@ -1,0 +1,9 @@
+handle_path /dev/coverage/api/* {
+    root * /var/www/html/coverage/hp/api/
+    file_server
+}
+
+handle_path /components/* {
+    root * /var/www/html/components/
+    file_server
+}

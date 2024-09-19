@@ -1,0 +1,41 @@
+name: Docker Checks
+
+on:
+  pull_request:
+    branches: [trunk]
+  push:
+    branches: [trunk]
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Load .env file
+      uses: aarcangeli/load-dotenv@v1.0.0
+      with:
+        filenames: |
+          .env.template
+        quiet: false
+        if-file-not-found: error
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20.16.0'
+        cache: 'npm'
+        cache-dependency-path: ./frontend/package-lock.json
+    - name: Setup Github Packages Token
+      working-directory: ./frontend
+      run: echo //npm.pkg.github.com/:_authToken=${{ secrets.PKG_KEY }} >> ~/.npmrc
+    - name: Install Dependencies
+      working-directory: ./frontend
+      run: npm ci
+    - name: Build frontend
+      working-directory: ./frontend
+      run: npm run build
+    - name: Build Compose
+      run: |
+        docker compose -f compose.staging.yaml build

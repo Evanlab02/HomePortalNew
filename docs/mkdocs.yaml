@@ -1,0 +1,9 @@
+site_name: Home Portal Documentation
+theme: readthedocs
+nav:
+  - First Steps: index.md
+  - Guides:
+    - Setting up: guides/index.md
+    - Post setup: guides/post-setup.md
+    - Application Setup Guides:
+      - Development Applications: apps/development.md

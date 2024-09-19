@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Flex grid renders correctly 1`] = `
+<div
+  class="hp-flex-grid-container"
+  data-testid="hp-flex-grid-container"
+>
+  <div
+    class="hp-flex-grid-col-xs-1 hp-flex-grid-col-sm-2 hp-flex-grid-col-md-3 hp-flex-grid-col-lg-4 hp-flex-grid-col-xl-5 hp-flex-grid-col-xxl-6"
+    data-testid="hp-flex-grid-item"
+  >
+    <p>
+      Hello World!
+    </p>
+  </div>
+</div>
+`;

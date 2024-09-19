@@ -1,0 +1,106 @@
+services:
+  home-portal-postgres-16:
+    container_name: hp-postgres-16
+    image: postgres:16.2-alpine3.18
+    environment:
+      POSTGRES_USER: postgres
+    env_file:
+      - .env
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: always
+    networks:
+      - home-portal-network
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4096M
+
+  home-portal-pgadmin-8:
+    container_name: hp-pgadmin-8
+    image: dpage/pgadmin4:8.5
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - SCRIPT_NAME=/pgadmin
+    networks:
+      - home-portal-network
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 4096M
+
+  home-portal-admin:
+    container_name: hp-admin
+    image: ghcr.io/evanlab02/hp-admin:v0.1.5
+    env_file:
+      - .env
+    depends_on:
+      home-portal-postgres-16:
+        condition: service_healthy
+    restart: always
+    networks:
+      - home-portal-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1024M
+    command: "/bin/bash -c 'python manage.py migrate && uvicorn hub.admin.asgi:application --host 0.0.0.0 --port 80 --workers 1'"
+
+  home-portal-api:
+    container_name: hp-api
+    image: ghcr.io/evanlab02/hp-api:v0.1.5
+    env_file:
+      - .env
+    depends_on:
+      home-portal-postgres-16:
+        condition: service_healthy
+    restart: always
+    networks:
+      - home-portal-network
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4096M
+
+  home-portal-site:
+    container_name: hp-site
+    image: ghcr.io/evanlab02/hp-site:v0.1.5
+    env_file:
+      - .env
+    restart: always
+    expose:
+      - 80
+    ports:
+      - "80:80"
+    networks:
+      - home-portal-network
+    volumes:
+      - ./site/Caddyfile:/etc/caddy/Caddyfile
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4096M
+
+volumes:
+  postgres-data:
+    external: false
+  pgadmin-data:
+    external: false
+
+networks:
+  home-portal-network:
+    driver: bridge

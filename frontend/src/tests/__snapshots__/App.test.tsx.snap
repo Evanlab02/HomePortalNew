@@ -1,0 +1,452 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App renders correctly 1`] = `
+<div
+  class="home-portal-app"
+  data-testid="hp-app"
+>
+  <div
+    class="home-portal-side-menu"
+  >
+    <ul
+      class="ant-menu ant-menu-root ant-menu-vertical ant-menu-dark ant-menu-inline-collapsed css-dev-only-do-not-override-qnu6hi"
+      data-menu-list="true"
+      role="menu"
+      tabindex="0"
+    >
+      <li
+        class="ant-menu-item"
+        data-menu-id="rc-menu-uuid-test-home"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          aria-label="home"
+          class="anticon anticon-home ant-menu-item-icon"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="home"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 00-44.4 0L77.5 505a63.9 63.9 0 00-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0018.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
+            />
+          </svg>
+        </span>
+        <span
+          class="ant-menu-title-content"
+        >
+          Home
+        </span>
+      </li>
+      <li
+        class="ant-menu-submenu ant-menu-submenu-vertical"
+        role="none"
+      >
+        <div
+          aria-controls="rc-menu-uuid-test-administration-popup"
+          aria-expanded="false"
+          aria-haspopup="true"
+          class="ant-menu-submenu-title"
+          data-menu-id="rc-menu-uuid-test-administration"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <span
+            aria-label="code"
+            class="anticon anticon-code ant-menu-item-icon"
+            role="img"
+          >
+            <svg
+              aria-hidden="true"
+              data-icon="code"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM513.1 518.1l-192 161c-5.2 4.4-13.1.7-13.1-6.1v-62.7c0-2.3 1.1-4.6 2.9-6.1L420.7 512l-109.8-92.2a7.63 7.63 0 01-2.9-6.1V351c0-6.8 7.9-10.5 13.1-6.1l192 160.9c3.9 3.2 3.9 9.1 0 12.3zM716 673c0 4.4-3.4 8-7.5 8h-185c-4.1 0-7.5-3.6-7.5-8v-48c0-4.4 3.4-8 7.5-8h185c4.1 0 7.5 3.6 7.5 8v48z"
+              />
+            </svg>
+          </span>
+          <span
+            class="ant-menu-title-content"
+          >
+            Administration
+          </span>
+          <i
+            class="ant-menu-submenu-arrow"
+          />
+        </div>
+      </li>
+      <li
+        class="ant-menu-item"
+        data-menu-id="rc-menu-uuid-test-me"
+        role="menuitem"
+        tabindex="-1"
+      >
+        <span
+          aria-label="user"
+          class="anticon anticon-user ant-menu-item-icon"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="user"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z"
+            />
+          </svg>
+        </span>
+        <span
+          class="ant-menu-title-content"
+        >
+          Me
+        </span>
+      </li>
+    </ul>
+    <div
+      aria-hidden="true"
+      style="display: none;"
+    />
+  </div>
+  <div
+    class="home-portal-content"
+  >
+    <div
+      class="hp-flex-grid-container"
+      data-testid="hp-flex-grid-container"
+    >
+      <div
+        class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-12 hp-flex-grid-col-xl-12 hp-flex-grid-col-xxl-12"
+        data-testid="hp-flex-grid-item"
+      >
+        <ul
+          class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-dark css-dev-only-do-not-override-qnu6hi"
+          data-menu-list="true"
+          role="menu"
+          tabindex="0"
+        >
+          <li
+            class="ant-menu-overflow-item ant-menu-item"
+            data-menu-id="rc-menu-uuid-test-menu"
+            role="menuitem"
+            style="opacity: 1; order: 0;"
+            tabindex="-1"
+          >
+            <span
+              aria-label="menu"
+              class="anticon anticon-menu ant-menu-item-icon"
+              role="img"
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="menu"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+                />
+              </svg>
+            </span>
+            <span
+              class="ant-menu-title-content"
+            >
+              Menu
+            </span>
+          </li>
+          <li
+            class="ant-menu-overflow-item ant-menu-item"
+            role="menuitem"
+            style="opacity: 1; order: 1;"
+            tabindex="-1"
+          >
+            <span
+              aria-label="home"
+              class="anticon anticon-home ant-menu-item-icon"
+              role="img"
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="home"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 00-44.4 0L77.5 505a63.9 63.9 0 00-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0018.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
+                />
+              </svg>
+            </span>
+            <span
+              class="ant-menu-title-content"
+            >
+              Home
+            </span>
+          </li>
+          <li
+            class="ant-menu-overflow-item ant-menu-item"
+            role="menuitem"
+            style="opacity: 1; order: 2;"
+            tabindex="-1"
+          >
+            <span
+              aria-label="team"
+              class="anticon anticon-team ant-menu-item-icon"
+              role="img"
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="team"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M824.2 699.9a301.55 301.55 0 00-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 00-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 008 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 01612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 008-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 01-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 01612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 01-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 008 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z"
+                />
+              </svg>
+            </span>
+            <span
+              class="ant-menu-title-content"
+            >
+              Admin
+            </span>
+          </li>
+          <li
+            class="ant-menu-overflow-item ant-menu-item"
+            role="menuitem"
+            style="opacity: 1; order: 3;"
+            tabindex="-1"
+          >
+            <span
+              aria-label="user"
+              class="anticon anticon-user ant-menu-item-icon"
+              role="img"
+            >
+              <svg
+                aria-hidden="true"
+                data-icon="user"
+                fill="currentColor"
+                focusable="false"
+                height="1em"
+                viewBox="64 64 896 896"
+                width="1em"
+              >
+                <path
+                  d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z"
+                />
+              </svg>
+            </span>
+            <span
+              class="ant-menu-title-content"
+            >
+              Account
+            </span>
+          </li>
+          <li
+            aria-hidden="true"
+            class="ant-menu-overflow-item ant-menu-overflow-item-rest ant-menu-submenu ant-menu-submenu-horizontal"
+            role="none"
+            style="opacity: 0; height: 0px; overflow-y: hidden; order: 9007199254740991; pointer-events: none; position: absolute;"
+          >
+            <div
+              aria-controls="rc-menu-uuid-test-rc-menu-more-popup"
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="ant-menu-submenu-title"
+              data-menu-id="rc-menu-uuid-test-rc-menu-more"
+              role="menuitem"
+              tabindex="-1"
+            >
+              <span
+                aria-label="ellipsis"
+                class="anticon anticon-ellipsis"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="ellipsis"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z"
+                  />
+                </svg>
+              </span>
+              <i
+                class="ant-menu-submenu-arrow"
+              />
+            </div>
+          </li>
+        </ul>
+        <div
+          aria-hidden="true"
+          style="display: none;"
+        />
+      </div>
+      <div
+        class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-12 hp-flex-grid-col-xl-12 hp-flex-grid-col-xxl-12"
+        data-testid="hp-flex-grid-item"
+      >
+        <div
+          class="home-portal"
+          data-testid="hp-home-page"
+        >
+          <h1>
+            Services
+          </h1>
+          <div
+            class="hp-flex-grid-container"
+            data-testid="hp-flex-grid-container"
+          >
+            <div
+              class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-6 hp-flex-grid-col-xl-4 hp-flex-grid-col-xxl-2"
+              data-testid="hp-flex-grid-item"
+            >
+              <div
+                class="ant-card ant-card-bordered css-dev-only-do-not-override-w5lxuz"
+              >
+                <div
+                  class="ant-card-head"
+                >
+                  <div
+                    class="ant-card-head-wrapper"
+                  >
+                    <div
+                      class="ant-card-head-title"
+                    >
+                      Postgres Administration
+                    </div>
+                    <div
+                      class="ant-card-extra"
+                    >
+                      <a
+                        class="hp-service-link"
+                        href="/pgadmin/"
+                      >
+                        PgAdmin
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-card-body"
+                >
+                  <p>
+                    Intended for developers. Manage the postgres database provided by home portal and any other database that might be running.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-6 hp-flex-grid-col-xl-4 hp-flex-grid-col-xxl-2"
+              data-testid="hp-flex-grid-item"
+            >
+              <div
+                class="ant-card ant-card-bordered css-dev-only-do-not-override-w5lxuz"
+              >
+                <div
+                  class="ant-card-head"
+                >
+                  <div
+                    class="ant-card-head-wrapper"
+                  >
+                    <div
+                      class="ant-card-head-title"
+                    >
+                      Home Portal Administration
+                    </div>
+                    <div
+                      class="ant-card-extra"
+                    >
+                      <a
+                        class="hp-service-link"
+                        href="/admin/"
+                      >
+                        Admin
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-card-body"
+                >
+                  <p>
+                    Intended for developers and home portal administrators. Manage home portal users and configuration through the built in admin interface.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-6 hp-flex-grid-col-xl-4 hp-flex-grid-col-xxl-2"
+              data-testid="hp-flex-grid-item"
+            >
+              <div
+                class="ant-card ant-card-bordered css-dev-only-do-not-override-w5lxuz"
+              >
+                <div
+                  class="ant-card-head"
+                >
+                  <div
+                    class="ant-card-head-wrapper"
+                  >
+                    <div
+                      class="ant-card-head-title"
+                    >
+                      Accounts
+                    </div>
+                    <div
+                      class="ant-card-extra"
+                    >
+                      <a
+                        class="hp-service-link"
+                        href="/accounts/"
+                      >
+                        My Account
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-card-body"
+                >
+                  <p>
+                    Manage your account on home portal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

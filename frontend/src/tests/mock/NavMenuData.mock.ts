@@ -1,0 +1,1 @@
+export const navMenuMock = { "applications": [{ "link": "/admin/", "nav_link_name": "Admin", "nav_link_icon": "TeamOutlined" }, { "link": "/accounts/", "nav_link_name": "Account", "nav_link_icon": "UserOutlined" }] };

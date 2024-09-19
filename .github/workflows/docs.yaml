@@ -1,0 +1,30 @@
+name: Docs Checks
+
+on:
+  pull_request:
+    branches: [trunk]
+  push:
+    branches: [trunk]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: ./docs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.12.5'
+        cache: 'pip'
+    - name: Setup
+      run: |
+        pip install -r requirements.txt
+    - name: Linting
+      run: |
+        mkdocs build

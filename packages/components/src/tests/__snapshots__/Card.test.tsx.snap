@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card renders correctly 1`] = `
+<div
+  data-testid="testing-hp-card"
+>
+  <div
+    class="ant-card ant-card-bordered css-dev-only-do-not-override-w5lxuz"
+  >
+    <div
+      class="ant-card-head"
+    >
+      <div
+        class="ant-card-head-wrapper"
+      >
+        <div
+          class="ant-card-head-title"
+        >
+          Hello World
+        </div>
+        <div
+          class="ant-card-extra"
+        >
+          <a
+            href="/link/to/somewhere"
+          >
+            Random Link
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ant-card-body"
+    >
+      <p>
+        This is the card description, and goodbye world!
+      </p>
+    </div>
+  </div>
+</div>
+`;

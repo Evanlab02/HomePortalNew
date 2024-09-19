@@ -1,0 +1,3 @@
+- Create workflows for release please full install zip file
+- Stories for rest of components in component lib
+- Sonarcloud workflows

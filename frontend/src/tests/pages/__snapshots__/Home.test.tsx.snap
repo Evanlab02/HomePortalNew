@@ -1,0 +1,134 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home page renders correctly 1`] = `
+<div
+  class="home-portal"
+  data-testid="hp-home-page"
+>
+  <h1>
+    Services
+  </h1>
+  <div
+    class="hp-flex-grid-container"
+    data-testid="hp-flex-grid-container"
+  >
+    <div
+      class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-6 hp-flex-grid-col-xl-4 hp-flex-grid-col-xxl-2"
+      data-testid="hp-flex-grid-item"
+    >
+      <div
+        class="ant-card ant-card-bordered css-dev-only-do-not-override-w5lxuz"
+      >
+        <div
+          class="ant-card-head"
+        >
+          <div
+            class="ant-card-head-wrapper"
+          >
+            <div
+              class="ant-card-head-title"
+            >
+              Postgres Administration
+            </div>
+            <div
+              class="ant-card-extra"
+            >
+              <a
+                class="hp-service-link"
+                href="/pgadmin/"
+              >
+                PgAdmin
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <p>
+            Intended for developers. Manage the postgres database provided by home portal and any other database that might be running.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-6 hp-flex-grid-col-xl-4 hp-flex-grid-col-xxl-2"
+      data-testid="hp-flex-grid-item"
+    >
+      <div
+        class="ant-card ant-card-bordered css-dev-only-do-not-override-w5lxuz"
+      >
+        <div
+          class="ant-card-head"
+        >
+          <div
+            class="ant-card-head-wrapper"
+          >
+            <div
+              class="ant-card-head-title"
+            >
+              Home Portal Administration
+            </div>
+            <div
+              class="ant-card-extra"
+            >
+              <a
+                class="hp-service-link"
+                href="/admin/"
+              >
+                Admin
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <p>
+            Intended for developers and home portal administrators. Manage home portal users and configuration through the built in admin interface.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hp-flex-grid-col-xs-12 hp-flex-grid-col-sm-12 hp-flex-grid-col-md-12 hp-flex-grid-col-lg-6 hp-flex-grid-col-xl-4 hp-flex-grid-col-xxl-2"
+      data-testid="hp-flex-grid-item"
+    >
+      <div
+        class="ant-card ant-card-bordered css-dev-only-do-not-override-w5lxuz"
+      >
+        <div
+          class="ant-card-head"
+        >
+          <div
+            class="ant-card-head-wrapper"
+          >
+            <div
+              class="ant-card-head-title"
+            >
+              Accounts
+            </div>
+            <div
+              class="ant-card-extra"
+            >
+              <a
+                class="hp-service-link"
+                href="/accounts/"
+              >
+                My Account
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <p>
+            Manage your account on home portal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

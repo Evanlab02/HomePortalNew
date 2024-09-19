@@ -1,0 +1,10 @@
+[run]
+branch = False
+omit =
+    ./tests/*
+    ./shoppingapp/*
+    ./manage.py
+    ./**/tests/*
+    ./setup.py
+    ./conftest.py
+    ./**/migrations/*.py

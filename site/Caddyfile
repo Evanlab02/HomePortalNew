@@ -1,0 +1,45 @@
+:80 {
+	handle_path /docs/* {
+		root * /var/www/html/docs/
+		file_server
+	}
+
+	handle_path /dev/coverage/api/* {
+		root * /var/www/html/coverage/hp/api/
+		file_server
+	}
+
+	handle_path /components/* {
+		root * /var/www/html/components/
+		file_server
+	}
+
+	handle_path /accounts/* {
+		rewrite * /accounts{uri}
+		reverse_proxy hp-api:80
+	}
+
+	handle_path /admin/* {
+		rewrite * /admin{uri}
+		reverse_proxy hp-admin:80
+	}
+	
+	handle_path /static/* {
+		root * /var/www/html/static/
+		file_server
+	}
+
+	handle_path /pgadmin* {
+		rewrite * /pgadmin{uri}
+		reverse_proxy hp-pgadmin-8:80
+	}
+
+	handle_path /apis/portal/* {
+		reverse_proxy hp-api:80
+	}
+	
+	handle_path /* {
+		root * /var/www/html/site/
+		file_server
+	}
+}

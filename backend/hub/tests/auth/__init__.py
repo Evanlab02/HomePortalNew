@@ -1,0 +1,1 @@
+"""Contains HUB auth tests."""
