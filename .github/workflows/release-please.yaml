@@ -253,6 +253,7 @@ jobs:
         run: |
           mkdir -p ./HomePortal
           cp ./compose.yaml ./HomePortal
+          mkdir -p ./HomePortal/site
           cp ./site/examples/Caddyfile ./HomePortal/site/Caddyfile
           cp -r ./scripts ./HomePortal
           cp ./.env.template ./HomePortal
