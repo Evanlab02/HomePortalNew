@@ -1,8 +1,8 @@
 {
-    ".": "0.1.8",
-    "backend": "0.1.5",
-    "docs": "0.1.6",
-    "frontend": "0.1.6",
-    "site": "0.1.5",
-    "packages/components": "0.1.6"
+    ".": "0.0.0",
+    "backend": "0.0.0",
+    "docs": "0.0.0",
+    "frontend": "0.0.0",
+    "site": "0.0.0",
+    "packages/components": "0.0.0"
 }

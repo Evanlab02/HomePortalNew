@@ -2,21 +2,26 @@
     "draft-pull-request": true,
     "packages": {
         "backend": {
+            "release-as": "0.1.0",
             "release-type": "simple",
             "package-name": "home-portal-api"
         },
         "docs": {
+            "release-as": "0.1.0",
             "release-type": "simple",
             "package-name": "home-portal-documentation"
         },
         "frontend": {
+            "release-as": "0.1.0",
             "release-type": "node"
         },
         "packages/components": {
+            "release-as": "0.1.0",
             "separate-pull-requests": true,
             "release-type": "node"
         },
         "site": {
+            "release-as": "0.1.0",
             "release-type": "simple",
             "package-name": "home-portal-site"
         },
@@ -24,7 +29,7 @@
             "include-component-in-tag": false,
             "release-type": "simple",
             "package-name": "Home Portal",
-            "release-as": "0.1.9",
+            "release-as": "0.1.0",
             "exclude-paths": [
                 "packages/components",
                 "frontend",
