@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0 (2024-09-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Complete refactor of Home Portal
+
+### Features
+
+* Complete refactor of Home Portal ([adfcb8f](https://github.com/Evanlab02/HomePortal/commit/adfcb8fc5c2c8f62b673df5c8163304ecbb3b053))
+
+
+### Bug Fixes
+
+* Reset versions ([ded7769](https://github.com/Evanlab02/HomePortal/commit/ded776986038552dd2d7e0bbcf839be4896377ad))
+
 ## [0.1.8](https://github.com/Evanlab02/HomePortal/compare/v0.1.7...v0.1.8) (2024-09-16)
 
 
