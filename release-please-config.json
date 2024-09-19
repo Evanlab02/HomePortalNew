@@ -23,7 +23,6 @@
         ".": {
             "include-component-in-tag": false,
             "release-type": "simple",
-            "package-name": "Home Portal",
             "exclude-paths": [
                 "packages/components",
                 "frontend",
