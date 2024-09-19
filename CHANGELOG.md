@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/Evanlab02/HomePortal/compare/v0.1.1...v0.1.2) (2024-09-19)
+
+
+### Bug Fixes
+
+* Attempt to fix release please issues ([4be931e](https://github.com/Evanlab02/HomePortal/commit/4be931e14b613214d5dc97635a6c2be63a5d1ea8))
+* Fix installer packaging ([bb775a4](https://github.com/Evanlab02/HomePortal/commit/bb775a489b55c761c30d9fdc1a79654c23144474))
+
 ## [0.1.1](https://github.com/Evanlab02/HomePortal/compare/v0.1.0...v0.1.1) (2024-09-19)
 
 
