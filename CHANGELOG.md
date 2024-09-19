@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/Evanlab02/HomePortal/compare/v0.1.0...v0.1.1) (2024-09-19)
+
+
+### Bug Fixes
+
+* Remove release-as fields from release-please config ([059258c](https://github.com/Evanlab02/HomePortal/commit/059258cc237f544b77943d2797358517bb373b28))
+* Use correct versions in compose file ([1d52ac6](https://github.com/Evanlab02/HomePortal/commit/1d52ac6a7d054a8a97b5e09b0089138807444f2e))
+
 ## 0.1.0 (2024-09-19)
 
 
