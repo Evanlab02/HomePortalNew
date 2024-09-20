@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Evanlab02/HomePortal/compare/home-portal-api-v0.1.0...home-portal-api-v0.2.0) (2024-09-20)
+
+
+### Features
+
+* **Shopping List App:** Created command for installing the Shopping List App ([655b21b](https://github.com/Evanlab02/HomePortal/commit/655b21bba5a6698ae788b68a94dd8f1efd09b2fc))
+
 ## 0.1.0 (2024-09-19)
 
 

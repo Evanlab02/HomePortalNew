@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Evanlab02/HomePortal/compare/home-portal-site-v0.1.0...home-portal-site-v0.2.0) (2024-09-20)
+
+
+### Features
+
+* **Shopping List App:** Integrated Shopping List App into the site ([e77e125](https://github.com/Evanlab02/HomePortal/commit/e77e125096ebd6f83862afe2af15f561e28d802c))
+
 ## 0.1.0 (2024-09-19)
 
 

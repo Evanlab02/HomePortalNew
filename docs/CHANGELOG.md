@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Evanlab02/HomePortal/compare/home-portal-documentation-v0.1.0...home-portal-documentation-v0.2.0) (2024-09-20)
+
+
+### Features
+
+* **Shopping List App:** Added documentation for the Shopping List App ([741001f](https://github.com/Evanlab02/HomePortal/commit/741001fa3a5f661d0dd497e9c4689f9abf5d3487))
+
 ## 0.1.0 (2024-09-19)
 
 

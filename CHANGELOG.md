@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.0](https://github.com/Evanlab02/HomePortal/compare/v0.1.2...v0.2.0) (2024-09-20)
+
+
+### Features
+
+* **Shopping List App:** Added install scripts for Shopping List App ([28c9fef](https://github.com/Evanlab02/HomePortal/commit/28c9fef7bd94cf7d01e3b473ce06b993b90e539b))
+* **Shopping List App:** Added shopping list app static files to site image ([3ca5146](https://github.com/Evanlab02/HomePortal/commit/3ca5146d42a558bc94b3836c6a68f5f6c3213e22))
+* **Shopping List App:** Integrated Shopping List App into the site ([e77e125](https://github.com/Evanlab02/HomePortal/commit/e77e125096ebd6f83862afe2af15f561e28d802c))
+* **ShoppingListApp:** Integrated ShoppingListApp into home portal ([252a309](https://github.com/Evanlab02/HomePortal/commit/252a309e0550ff117ade39eef03616d44b4c08cf))
+
+
+### Bug Fixes
+
+* **Containers:** Reduced resource limits for all containers ([71d8fcc](https://github.com/Evanlab02/HomePortal/commit/71d8fcc5d9bec22f5bc867b2af1fcd1aa56e4bef))
+
 ## [0.1.2](https://github.com/Evanlab02/HomePortal/compare/v0.1.1...v0.1.2) (2024-09-19)
 
 
