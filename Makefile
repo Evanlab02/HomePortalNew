@@ -40,3 +40,6 @@ up:
 
 down:
 	docker compose down
+
+debug-f:
+	docker compose -f compose.full.yaml up

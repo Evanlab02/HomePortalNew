@@ -89,12 +89,53 @@ services:
     restart: always
     expose:
       - 80
+      - 9999
     ports:
       - "80:80"
+      - "9999:9999"
     networks:
       - staging-home-portal-network
     volumes:
       - ./site/Caddyfile:/etc/caddy/Caddyfile
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+  
+  staging-shopping-django-administration:
+    container_name: shopping-django-admin
+    image: ghcr.io/evanlab02/shoppingappadmin:0.16.2
+    env_file:
+      - .env.staging
+    environment:
+      SHOPPING_DEFAULT_SETTINGS_MODULE: shoppingapp.settings.settings
+    command: /bin/bash -c "python manage.py migrate && python manage.py runserver"
+    depends_on:
+      staging-home-portal-postgres-16:
+        condition: service_healthy
+    networks:
+      - staging-home-portal-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+
+  staging-shopping-django-app:
+    container_name: shopping-django-app
+    image: ghcr.io/evanlab02/shoppingappbe:0.16.2
+    environment:
+      SHOPPING_DEFAULT_SETTINGS_MODULE: shoppingapp.settings.settings
+    env_file:
+      - .env.staging
+    command: "gunicorn -b 0.0.0.0:80 -w 1 --log-config shoppingapp/logging.config --capture-output --log-level info --worker-class uvicorn_worker.UvicornWorker 'shoppingapp.config.asgi:app'"
+    depends_on:
+      staging-home-portal-postgres-16:
+        condition: service_healthy
+    networks:
+      - staging-home-portal-network
+    restart: always
     deploy:
       resources:
         limits:
