@@ -43,3 +43,23 @@
 		file_server
 	}
 }
+
+:9999 {
+	handle_path /* {
+    	reverse_proxy shopping-django-app:80
+	}
+
+	handle_path /apis/shopping/* {
+    	reverse_proxy shopping-django-app:80
+	}
+
+	handle_path /static/* {
+		root * /var/www/html/shopping/static/
+		file_server
+	}
+
+	handle_path /shopping/dashboard/* {
+    	root * /var/www/html/shopping/site/
+    	file_server
+	}
+}

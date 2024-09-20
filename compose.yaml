@@ -19,8 +19,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.0'
-          memory: 4096M
+          cpus: "1.0"
+          memory: 1028M
 
   home-portal-pgadmin-8:
     container_name: hp-pgadmin-8
@@ -37,12 +37,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "4.0"
-          memory: 4096M
+          cpus: "1.0"
+          memory: 1028M
 
   home-portal-admin:
     container_name: hp-admin
-    image: ghcr.io/evanlab02/hp-admin:v0.1.1
+    image: ghcr.io/evanlab02/hp-admin:v0.2.0
     env_file:
       - .env
     depends_on:
@@ -55,12 +55,12 @@ services:
       resources:
         limits:
           cpus: '1.0'
-          memory: 1024M
+          memory: 512M
     command: "/bin/bash -c 'python manage.py migrate && uvicorn hub.admin.asgi:application --host 0.0.0.0 --port 80 --workers 1'"
 
   home-portal-api:
     container_name: hp-api
-    image: ghcr.io/evanlab02/hp-api:v0.1.1
+    image: ghcr.io/evanlab02/hp-api:v0.2.0
     env_file:
       - .env
     depends_on:
@@ -72,19 +72,21 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.0'
-          memory: 4096M
+          cpus: '1.0'
+          memory: 512M
 
   home-portal-site:
     container_name: hp-site
-    image: ghcr.io/evanlab02/hp-site:v0.1.1
+    image: ghcr.io/evanlab02/hp-site:v0.2.0
     env_file:
       - .env
     restart: always
     expose:
       - 80
+      - 9999
     ports:
       - "80:80"
+      - "9999:9999"
     networks:
       - home-portal-network
     volumes:
@@ -92,8 +94,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.0'
-          memory: 4096M
+          cpus: '1.0'
+          memory: 512M
 
 volumes:
   postgres-data:
