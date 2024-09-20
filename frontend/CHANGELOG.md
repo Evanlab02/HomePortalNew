@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Evanlab02/HomePortal/compare/home-portal-fe-v0.1.0...home-portal-fe-v0.2.0) (2024-09-20)
+
+
+### Features
+
+* **Shopping List App:** Added icon for the shopping list app and category ([08007af](https://github.com/Evanlab02/HomePortal/commit/08007afd9f0d3eff24987d826174f1964f257fb5))
+
 ## 0.1.0 (2024-09-19)
 
 
