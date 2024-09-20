@@ -5,5 +5,9 @@ nav:
   - Guides:
     - Setting up: guides/index.md
     - Post setup: guides/post-setup.md
+    - Setup PGAdmin: guides/pgadmin.md
     - Application Setup Guides:
       - Development Applications: apps/development.md
+      - Shopping List App Application: apps/shopping-app.md
+    - Update Guides:
+      - V0.2.0: update/update0-2-0.md

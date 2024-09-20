@@ -7,7 +7,7 @@ The following apps are included in this category:
 - Home Portal Component Library Storybook
 - API Coverage Report
 
-These apps are available for `v0.2.0` and above.
+These apps are available for `v0.1.0` and above.
 
 If you would like to have these apps included, follow the below steps:
 
