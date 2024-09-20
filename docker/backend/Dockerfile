@@ -13,4 +13,4 @@ COPY backend/apps/ /app/apps/
 EXPOSE 80
 
 ENTRYPOINT [ "uvicorn" ]
-CMD [ "hub.servers.asgi:application", "--host", "0.0.0.0", "--port", "80", "--workers", "4" ]
+CMD [ "hub.servers.asgi:application", "--host", "0.0.0.0", "--port", "80", "--workers", "1" ]

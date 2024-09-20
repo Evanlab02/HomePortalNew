@@ -19,8 +19,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.0'
-          memory: 4096M
+          cpus: '1.0'
+          memory: 1028M
 
   staging-home-portal-pgadmin-8:
     container_name: hp-pgadmin-8
@@ -37,8 +37,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "4.0"
-          memory: 4096M
+          cpus: "1.0"
+          memory: 1028M
 
   staging-home-portal-admin:
     container_name: hp-admin
@@ -57,7 +57,7 @@ services:
       resources:
         limits:
           cpus: '1.0'
-          memory: 1024M
+          memory: 512M
     command: "/bin/bash -c 'python manage.py migrate && uvicorn hub.admin.asgi:application --host 0.0.0.0 --port 80 --workers 1'"
 
   staging-home-portal-api:
@@ -76,8 +76,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.0'
-          memory: 4096M
+          cpus: '1.0'
+          memory: 512M
 
   staging-home-portal-site:
     container_name: hp-site
@@ -98,8 +98,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.0'
-          memory: 4096M
+          cpus: '1.0'
+          memory: 512M
 
 volumes:
   staging-postgres-data:
