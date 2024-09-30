@@ -32,6 +32,14 @@ DEBUG = False
 
 ALLOWED_HOSTS = [os.getenv("HP_API_DJANGO_HOST")]
 
+HP_API_HOST_ALT = os.getenv("HP_API_DJANGO_HOST_ALT", None)
+HP_API_HOST_ALT2 = os.getenv("HP_API_DJANGO_HOST_ALT2", None)
+
+if HP_API_HOST_ALT:
+    ALLOWED_HOSTS.append(HP_API_HOST_ALT)
+if HP_API_HOST_ALT2:
+    ALLOWED_HOSTS.append(HP_API_HOST_ALT2)
+
 
 # Application definition
 INSTALLED_APPS = [

@@ -28,6 +28,9 @@ HP_API_DJANGO_KEY=somethinglongerthan50charactersthatcontainsatleast1number
 HP_API_DJANGO_HOST=<yourhostname>
 HP_API_DATABASE_PASSWORD=<password_of_your_choosing>
 HP_API_DB_HOST=hp-postgres-16
+# Optional
+# HP_API_DJANGO_HOST_ALT=<yourhostname>
+# HP_API_DJANGO_HOST_ALT2=<yourhostname>
 ```
 
 ## 2. Start the services/containers
