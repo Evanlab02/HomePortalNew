@@ -1,0 +1,1 @@
+docker exec -it hp-admin python manage.py imedia
