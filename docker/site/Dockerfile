@@ -1,17 +1,23 @@
 FROM python:3.12.4-alpine3.20 AS backend
 
+COPY backend/requirements.dev.txt /build/install/
+WORKDIR /build/install
+RUN pip install -r requirements.dev.txt
+
 COPY backend/ /build/backend/
 WORKDIR /build/backend
-
-RUN pip install -r requirements.dev.txt
 RUN pytest . --cov=. --no-cov-on-fail --cov-report term-missing && coverage html
 
 FROM python:3.12.4-alpine3.20 AS docs
 
+COPY docs/requirements.txt /build/install/
+WORKDIR /build/install
+
+RUN pip install -r requirements.txt
+
 COPY docs/ /build/docs/
 WORKDIR /build/docs
 
-RUN pip install -r requirements.txt
 RUN mkdocs build
 
 FROM node:20.16.0-alpine3.20 AS components

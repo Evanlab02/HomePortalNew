@@ -9,5 +9,9 @@ nav:
     - Application Setup Guides:
       - Development Applications: apps/development.md
       - Shopping List App Application: apps/shopping-app.md
+      - Plex Media Server Application: apps/plex.md
+      - Prowlarr: apps/prowlarr.md
+      - Radarr: apps/radarr.md
+      - Sonarr: apps/sonarr.md
     - Update Guides:
       - V0.2.0: update/update0-2-0.md
