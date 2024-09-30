@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/Evanlab02/HomePortal/compare/v0.2.0...v0.3.0) (2024-09-30)
+
+
+### Features
+
+* **Media:** Allow for plex, prowlarr, sonarr and radarr applications in home portal ([a45bd63](https://github.com/Evanlab02/HomePortal/commit/a45bd63560e385462acf9f21ab33e9fff9cc3313))
+
+
+### Bug Fixes
+
+* Allow for alternative hosts for the Home Portal API ([f98105b](https://github.com/Evanlab02/HomePortal/commit/f98105bf0908a47b027f5abfd226380dfe934d8b))
+
 ## [0.2.0](https://github.com/Evanlab02/HomePortal/compare/v0.1.2...v0.2.0) (2024-09-20)
 
 
