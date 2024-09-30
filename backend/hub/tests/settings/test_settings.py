@@ -25,8 +25,10 @@ def test_debug_value() -> None:
 
 def test_allowed_hosts_value() -> None:
     """Test the allowed hosts value is correctly set from the admin settings."""
-    assert len(ALLOWED_HOSTS) == 1
+    assert len(ALLOWED_HOSTS) == 3
     assert ALLOWED_HOSTS[0] == "TESTING_HP_API_DJANGO_HOST"
+    assert ALLOWED_HOSTS[1] == "TESTING_HP_API_DJANGO_HOST_ALT"
+    assert ALLOWED_HOSTS[2] == "TESTING_HP_API_DJANGO_HOST_ALT_2"
 
 
 def test_root_url_conf_value() -> None:
