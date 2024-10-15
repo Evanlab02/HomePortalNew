@@ -9,7 +9,7 @@ export async function getData(url: string): Promise<Response> {
 	);
 
 	if (response.status == 401) {
-		window.location.href = "/accounts/";
+		window.location.href = "/accounts/"
 	}
 
 	return response;

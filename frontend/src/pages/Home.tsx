@@ -25,7 +25,7 @@ export default function Home() {
 						<FlexGridItem xs={12} sm={12} md={12} lg={6} xl={4} xxl={2} key={`${app.title}-${app.link_name}`}>
 							<Card
 								title={app.title}
-								extra={<a className="hp-service-link" href={app.link}>{app.link_name}</a>}
+								extra={<a target="_blank" className="hp-service-link" href={app.link}>{app.link_name}</a>}
 							>
 								<p>{app.description}</p>
 							</Card>

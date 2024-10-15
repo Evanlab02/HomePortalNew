@@ -44,14 +44,14 @@ export default function App() {
 			key: "home",
 			label: "Home",
 			icon: <HomeOutlined />,
-			onClick: () => { window.location.href = "/"; }
+			onClick: () => { window.open("/", "_blank")?.focus(); }
 		},
 		...navMenuItems.map((app) => {
 			return {
 				key: app.nav_link_name.toLowerCase(),
 				label: app.nav_link_name,
 				icon: iconMap.get(app.nav_link_icon),
-				onClick: () => { window.location.href = app.link; }
+				onClick: () => { window.open(app.link, "_blank")?.focus(); }
 			} as NavMenuItem;
 		})
 	];
@@ -74,7 +74,7 @@ export default function App() {
 							key: app.side_menu_name.toLowerCase(),
 							label: app.side_menu_name,
 							icon: iconMap.get(app.side_menu_icon),
-							onClick: () => { window.location.href = app.link; }
+							onClick: () => { window.open(app.link, "_blank")?.focus(); }
 						} as SideMenuItem;
 					})
 				]
@@ -85,7 +85,7 @@ export default function App() {
 				key: item.side_menu_name.toLowerCase(),
 				label: item.side_menu_name,
 				icon: iconMap.get(item.side_menu_icon),
-				onClick: () => { window.location.href = item.link; }
+				onClick: () => { window.open(item.link, "_blank")?.focus(); }
 			} as SideMenuItem;
 		})
 	];
