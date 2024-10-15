@@ -350,6 +350,8 @@ exports[`App renders correctly 1`] = `
                       <a
                         class="hp-service-link"
                         href="/pgadmin/"
+                        rel="noreferrer"
+                        target="_blank"
                       >
                         PgAdmin
                       </a>
@@ -389,6 +391,8 @@ exports[`App renders correctly 1`] = `
                       <a
                         class="hp-service-link"
                         href="/admin/"
+                        rel="noreferrer"
+                        target="_blank"
                       >
                         Admin
                       </a>
@@ -428,6 +432,8 @@ exports[`App renders correctly 1`] = `
                       <a
                         class="hp-service-link"
                         href="/accounts/"
+                        rel="noreferrer"
+                        target="_blank"
                       >
                         My Account
                       </a>
