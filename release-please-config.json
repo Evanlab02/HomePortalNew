@@ -16,18 +16,11 @@
             "separate-pull-requests": true,
             "release-type": "node"
         },
-        "site": {
-            "release-type": "simple",
-            "package-name": "home-portal-site"
-        },
         ".": {
             "include-component-in-tag": false,
             "release-type": "simple",
             "exclude-paths": [
-                "packages/components",
-                "frontend",
-                "backend",
-                "docs"
+                "packages/components"
             ]
         }
     },

@@ -53,6 +53,152 @@ jobs:
           echo //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }} >> ~/.npmrc
           npm publish --access public
 
+
+  backend-release:
+    runs-on: ubuntu-latest
+    needs: [release-please]
+    if: ${{ needs.release-please.outputs.api_release_created }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.16.0'
+          cache: 'npm'
+          cache-dependency-path: ./frontend/package-lock.json
+      - name: Setup Github Packages Token
+        working-directory: ./frontend
+        run: echo //npm.pkg.github.com/:_authToken=${{ secrets.PKG_KEY }} >> ~/.npmrc
+      - name: Install Dependencies
+        working-directory: ./frontend
+        run: npm ci
+      - name: Build Frontend
+        working-directory: ./frontend
+        run: npm run build
+      - name: Build Image
+        run: |
+          docker build -f ./docker/admin/Dockerfile -t hp-admin:latest .
+          docker build -f ./docker/backend/Dockerfile -t hp-api:latest .
+      - name: Log in to registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - name: Upload Tagged Image to Registry
+        run: |
+          docker tag hp-admin:latest ghcr.io/evanlab02/hp-admin:${{ needs.release-please.outputs.api_tag_name }}
+          docker push ghcr.io/evanlab02/hp-admin:${{ needs.release-please.outputs.api_tag_name }}
+          docker tag hp-api:latest ghcr.io/evanlab02/hp-api:${{ needs.release-please.outputs.api_tag_name }}
+          docker push ghcr.io/evanlab02/hp-api:${{ needs.release-please.outputs.api_tag_name }}
+      - name: Upload Latest Image to Registry
+        if: ${{ !needs.release-please.outputs.release_created }}
+        run: |
+          docker tag hp-admin:latest ghcr.io/evanlab02/hp-admin:latest
+          docker push ghcr.io/evanlab02/hp-admin:latest
+          docker tag hp-api:latest ghcr.io/evanlab02/hp-api:latest
+          docker push ghcr.io/evanlab02/hp-api:latest
+
+  docs-release:
+    runs-on: ubuntu-latest
+    needs: [release-please]
+    if: ${{ needs.release-please.outputs.docs_release_created }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.16.0'
+          cache: 'npm'
+          cache-dependency-path: ./frontend/package-lock.json
+      - name: Setup Github Packages Token
+        working-directory: ./frontend
+        run: echo //npm.pkg.github.com/:_authToken=${{ secrets.PKG_KEY }} >> ~/.npmrc
+      - name: Install Dependencies
+        working-directory: ./frontend
+        run: npm ci
+      - name: Build Frontend
+        working-directory: ./frontend
+        run: npm run build
+      - name: Build Image
+        run: |
+          docker build -f ./docker/site/Dockerfile -t hp-site:latest .
+      - name: Log in to registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - name: Upload Tagged Image to Registry
+        run: |
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.docs_tag_name }}
+          docker push ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.docs_tag_name }}
+      - name: Upload Latest Image to Registry
+        if: ${{ !needs.release-please.outputs.release_created && !needs.release-please.outputs.frontend_release_created && !needs.release-please.outputs.site_release_created }}
+        run: |
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:latest
+          docker push ghcr.io/evanlab02/hp-site:latest
+
+  frontend-release:
+    runs-on: ubuntu-latest
+    needs: [release-please]
+    if: ${{ needs.release-please.outputs.frontend_release_created }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.16.0'
+          cache: 'npm'
+          cache-dependency-path: ./frontend/package-lock.json
+      - name: Setup Github Packages Token
+        working-directory: ./frontend
+        run: echo //npm.pkg.github.com/:_authToken=${{ secrets.PKG_KEY }} >> ~/.npmrc
+      - name: Install Dependencies
+        working-directory: ./frontend
+        run: npm ci
+      - name: Build Frontend
+        working-directory: ./frontend
+        run: npm run build
+      - name: Build Image
+        run: |
+          docker build -f ./docker/site/Dockerfile -t hp-site:latest .
+      - name: Log in to registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - name: Upload Tagged Image to Registry
+        run: |
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.frontend_tag_name }}
+          docker push ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.frontend_tag_name }}
+      - name: Upload Latest Image to Registry
+        if: ${{ !needs.release-please.outputs.release_created && !needs.release-please.outputs.site_release_created }}
+        run: |
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:latest
+          docker push ghcr.io/evanlab02/hp-site:latest
+
+  site-release:
+    runs-on: ubuntu-latest
+    needs: [release-please]
+    if: ${{ needs.release-please.outputs.site_release_created }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.16.0'
+          cache: 'npm'
+          cache-dependency-path: ./frontend/package-lock.json
+      - name: Setup Github Packages Token
+        working-directory: ./frontend
+        run: echo //npm.pkg.github.com/:_authToken=${{ secrets.PKG_KEY }} >> ~/.npmrc
+      - name: Install Dependencies
+        working-directory: ./frontend
+        run: npm ci
+      - name: Build Frontend
+        working-directory: ./frontend
+        run: npm run build
+      - name: Build Image
+        run: |
+          docker build -f ./docker/site/Dockerfile -t hp-site:latest .
+      - name: Log in to registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - name: Upload Tagged Image to Registry
+        run: |
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.site_tag_name }}
+          docker push ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.site_tag_name }}
+      - name: Upload Latest Image to Registry
+        if: ${{ !needs.release-please.outputs.release_created }}
+        run: |
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:latest
+          docker push ghcr.io/evanlab02/hp-site:latest
+
   full-release:
     runs-on: ubuntu-latest
     needs: [release-please]
