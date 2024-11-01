@@ -25,10 +25,13 @@ PGADMIN_DEFAULT_PASSWORD=<password_of_your_choosing>
 
 # HOME PORTAL CONFIG
 HP_API_DJANGO_KEY=somethinglongerthan50charactersthatcontainsatleast1number
-HP_API_DJANGO_HOST=<yourhostname>
 HP_API_DATABASE_PASSWORD=<password_of_your_choosing>
 HP_API_DB_HOST=hp-postgres-16
-# Optional
+
+# Please note that the admin page will only be available on the primary host.
+HP_API_DJANGO_HOST=<yourhostname> 
+
+# Optional, to allow for alternative hosts for the main app/api.
 # HP_API_DJANGO_HOST_ALT=<yourhostname>
 # HP_API_DJANGO_HOST_ALT2=<yourhostname>
 ```
