@@ -8,6 +8,10 @@ It is still very early in development so please keep an eye here for all updates
 
 You can also view the documentation [here](https://evanlab-gme8r.ondigitalocean.app/).
 
+## Disclaimer
+
+**Home portal is a hobby project, and is only maintained by myself. Therefore it is highly recommended that you do not use this within a production environment. If you decide to use this in a production environment, please do so at your own risk. While I strive to keep this project up to date and secure, I can not guarantee that.**
+
 ## Getting started
 
 To get started with home portal, you will need to have the following installed on your machine:
