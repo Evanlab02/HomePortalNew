@@ -6,7 +6,7 @@ Home portal is a collection of tools, services and applications. Using docker it
 
 It is still very early in development so please keep an eye here for all updates.
 
-You can also view the documentation [here](https://home-portal-app-platform-wbymd.ondigitalocean.app/).
+You can also view the documentation [here](https://home-portal-app-platform-wbymd.ondigitalocean.app/hp/).
 
 ## Getting started
 
