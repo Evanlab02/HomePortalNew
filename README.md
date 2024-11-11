@@ -25,4 +25,4 @@ NOTE: Currently we are busy refactoring the codebase and the documentation. Plea
 2. Extract the zip file to a location on your machine.
 3. Open a terminal and navigate to the extracted folder.
 
-Once you have done this, follow the steps at this link to get it running: [Getting Started](https://evanlab-gme8r.ondigitalocean.app/guides/)
+Once you have done this, follow the steps at this link to get it running: [Getting Started](https://evanlab-gme8r.ondigitalocean.app/hp/guides/)
