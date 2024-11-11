@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/Evanlab02/HomePortal/compare/home-portal-fe-v0.3.0...home-portal-fe-v0.3.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* **Frontend:** Links will now open new tabs when visiting apps on the Home Portal ([8abebee](https://github.com/Evanlab02/HomePortal/commit/8abebeecf9b605db7c429bfb3b9e66af60b1d25d))
+
 ## [0.3.0](https://github.com/Evanlab02/HomePortal/compare/home-portal-fe-v0.2.0...home-portal-fe-v0.3.0) (2024-09-30)
 
 

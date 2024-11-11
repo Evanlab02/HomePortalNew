@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/Evanlab02/HomePortal/compare/home-portal-documentation-v0.3.0...home-portal-documentation-v0.3.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* **Docs:** Fixed navigation issue where some pages would not exist ([4da1410](https://github.com/Evanlab02/HomePortal/commit/4da14109ad98122f8104146aa8d09f748d5eb78e))
+
 ## [0.3.0](https://github.com/Evanlab02/HomePortal/compare/home-portal-documentation-v0.2.0...home-portal-documentation-v0.3.0) (2024-09-30)
 
 

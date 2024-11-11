@@ -6,7 +6,7 @@ Home portal is a collection of tools, services and applications. Using docker it
 
 It is still very early in development so please keep an eye here for all updates.
 
-You can also view the documentation [here](https://home-portal-app-platform-wbymd.ondigitalocean.app/hp/).
+You can also view the documentation [here](https://evanlab-gme8r.ondigitalocean.app/hp/).
 
 ## Getting started
 
@@ -25,4 +25,4 @@ NOTE: Currently we are busy refactoring the codebase and the documentation. Plea
 2. Extract the zip file to a location on your machine.
 3. Open a terminal and navigate to the extracted folder.
 
-Once you have done this, follow the steps at this link to get it running: [Getting Started](https://home-portal-app-platform-wbymd.ondigitalocean.app/guides/)
+Once you have done this, follow the steps at this link to get it running: [Getting Started](https://evanlab-gme8r.ondigitalocean.app/guides/)
