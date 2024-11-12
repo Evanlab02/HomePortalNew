@@ -42,3 +42,4 @@ nav:
       - Sonarr: apps/sonarr.md
     - Update Guides:
       - V0.2.0: update/update0-2-0.md
+      - V0.3.2: update/update0-3-2.md
