@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/Evanlab02/HomePortal/compare/hp-react-components-v0.1.1...hp-react-components-v0.1.2) (2024-11-13)
+
+
+### Bug Fixes
+
+* Re-release v0.3.2 due to release failures ([35a6eae](https://github.com/Evanlab02/HomePortal/commit/35a6eae0e55d9b56682020e6b4917aa81f5d4225))
+
 ## [0.1.1](https://github.com/Evanlab02/HomePortal/compare/hp-react-components-v0.1.0...hp-react-components-v0.1.1) (2024-11-13)
 
 
