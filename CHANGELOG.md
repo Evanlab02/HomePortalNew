@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.5](https://github.com/Evanlab02/HomePortal/compare/v0.3.4...v0.3.5) (2024-11-13)
+
+
+### Bug Fixes
+
+* Another forced re-release ([92f6988](https://github.com/Evanlab02/HomePortal/commit/92f69880221d6069adb25d210b9bd684bb674e3e))
+
 ## [0.3.4](https://github.com/Evanlab02/HomePortal/compare/v0.3.3...v0.3.4) (2024-11-13)
 
 
