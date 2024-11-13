@@ -1,0 +1,74 @@
+on:
+  workflow_dispatch:
+
+permissions: write-all
+
+name: Force Release
+
+jobs:
+  full-release:
+    runs-on: ubuntu-latest
+    needs: [release-please]
+    if: ${{ github.ref_type == 'tag' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.16.0'
+          cache: 'npm'
+          cache-dependency-path: ./frontend/package-lock.json
+      - name: Setup Github Packages Token
+        working-directory: ./frontend
+        run: echo //npm.pkg.github.com/:_authToken=${{ secrets.PKG_KEY }} >> ~/.npmrc
+      - name: Install Dependencies
+        working-directory: ./frontend
+        run: npm ci
+      - name: Build Frontend
+        working-directory: ./frontend
+        run: npm run build
+      - name: Build Latest Images
+        run: |
+          docker build -f ./docker/admin/Dockerfile -t hp-admin:latest .
+          docker build -f ./docker/backend/Dockerfile -t hp-api:latest .
+          docker build -f ./docker/site/Dockerfile -t hp-site:latest .
+      - name: Log in to registry 
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - name: Upload Tagged Images to Registry
+        run: |
+          docker tag hp-admin:latest ghcr.io/evanlab02/hp-admin:${{ github.ref_name }}
+          docker push ghcr.io/evanlab02/hp-admin:${{ needs.release-please.outputs.github.ref_name }}
+          docker tag hp-api:latest ghcr.io/evanlab02/hp-api:${{ needs.release-please.outputs.github.ref_name }}
+          docker push ghcr.io/evanlab02/hp-api:${{ needs.release-please.outputs.github.ref_name }}
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.github.ref_name }}
+          docker push ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.github.ref_name }}
+      - name: Upload Latest Images to Registry
+        run: |
+          docker tag hp-admin:latest ghcr.io/evanlab02/hp-admin:latest
+          docker push ghcr.io/evanlab02/hp-admin:latest
+          docker tag hp-api:latest ghcr.io/evanlab02/hp-api:latest
+          docker push ghcr.io/evanlab02/hp-api:latest
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:latest
+          docker push ghcr.io/evanlab02/hp-site:latest
+
+  installer-release:
+    runs-on: ubuntu-latest
+    needs: [release-please]
+    if: ${{ github.ref_type == 'tag' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create installation directory
+        run: |
+          mkdir -p ./HomePortal
+          cp ./compose.yaml ./HomePortal
+          mkdir -p ./HomePortal/site
+          cp ./site/examples/Caddyfile ./HomePortal/site/Caddyfile
+          cp -r ./scripts ./HomePortal
+          cp ./.env.template ./HomePortal
+      - name: Create installer zip
+        run: |
+          zip -r HomePortal.zip ./HomePortal
+      - name: Upload installer zip
+        run: |
+          gh release upload ${{ github.ref_name }} HomePortal.zip
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
