@@ -35,11 +35,11 @@ jobs:
       - name: Upload Tagged Images to Registry
         run: |
           docker tag hp-admin:latest ghcr.io/evanlab02/hp-admin:${{ github.ref_name }}
-          docker push ghcr.io/evanlab02/hp-admin:${{ needs.release-please.outputs.github.ref_name }}
-          docker tag hp-api:latest ghcr.io/evanlab02/hp-api:${{ needs.release-please.outputs.github.ref_name }}
-          docker push ghcr.io/evanlab02/hp-api:${{ needs.release-please.outputs.github.ref_name }}
-          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.github.ref_name }}
-          docker push ghcr.io/evanlab02/hp-site:${{ needs.release-please.outputs.github.ref_name }}
+          docker push ghcr.io/evanlab02/hp-admin:${{ github.ref_name }}
+          docker tag hp-api:latest ghcr.io/evanlab02/hp-api:${{ github.ref_name }}
+          docker push ghcr.io/evanlab02/hp-api:${{ github.ref_name }}
+          docker tag hp-site:latest ghcr.io/evanlab02/hp-site:${{ github.ref_name }}
+          docker push ghcr.io/evanlab02/hp-site:${{ github.ref_name }}
       - name: Upload Latest Images to Registry
         run: |
           docker tag hp-admin:latest ghcr.io/evanlab02/hp-admin:latest
