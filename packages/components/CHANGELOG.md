@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/Evanlab02/HomePortal/compare/hp-react-components-v0.1.0...hp-react-components-v0.1.1) (2024-11-13)
+
+
+### Bug Fixes
+
+* **#16:** Add story in storybook for the card component ([a91a007](https://github.com/Evanlab02/HomePortal/commit/a91a007d5e9d56bb9071162f5cfe72f4b6f87c9f))
+
 ## 0.1.0 (2024-09-19)
 
 

@@ -43,7 +43,7 @@ Find below a snippet of what you need to add:
 ```yaml
   shopping-django-administration:
     container_name: shopping-django-admin
-    image: ghcr.io/evanlab02/shoppingappadmin:0.16.2
+    image: ghcr.io/evanlab02/shoppingappadmin:0.17.0
     env_file:
       - .env
     environment:
@@ -62,7 +62,7 @@ Find below a snippet of what you need to add:
 
   shopping-django-app:
     container_name: shopping-django-app
-    image: ghcr.io/evanlab02/shoppingappbe:0.16.2
+    image: ghcr.io/evanlab02/shoppingappbe:0.17.0
     environment:
       SHOPPING_DEFAULT_SETTINGS_MODULE: shoppingapp.settings.settings
     env_file:
