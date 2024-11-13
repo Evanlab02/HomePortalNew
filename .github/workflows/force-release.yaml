@@ -8,7 +8,6 @@ name: Force Release
 jobs:
   full-release:
     runs-on: ubuntu-latest
-    needs: [release-please]
     if: ${{ github.ref_type == 'tag' }}
     steps:
       - uses: actions/checkout@v4
@@ -52,7 +51,6 @@ jobs:
 
   installer-release:
     runs-on: ubuntu-latest
-    needs: [release-please]
     if: ${{ github.ref_type == 'tag' }}
     steps:
       - uses: actions/checkout@v4
