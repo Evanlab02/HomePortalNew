@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.6](https://github.com/Evanlab02/HomePortal/compare/v0.3.5...v0.3.6) (2024-11-13)
+
+
+### Bug Fixes
+
+* Update Home Portal images to v0.3.6 in compose file ([84c0c97](https://github.com/Evanlab02/HomePortal/commit/84c0c978a12643df2127c2a69109bbeb7766bef9))
+
 ## [0.3.5](https://github.com/Evanlab02/HomePortal/compare/v0.3.4...v0.3.5) (2024-11-13)
 
 
