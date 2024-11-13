@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/Evanlab02/HomePortal/compare/home-portal-documentation-v0.3.2...home-portal-documentation-v0.3.3) (2024-11-13)
+
+
+### Bug Fixes
+
+* Re-release v0.3.2 due to release failures ([35a6eae](https://github.com/Evanlab02/HomePortal/commit/35a6eae0e55d9b56682020e6b4917aa81f5d4225))
+
 ## [0.3.2](https://github.com/Evanlab02/HomePortal/compare/home-portal-documentation-v0.3.1...home-portal-documentation-v0.3.2) (2024-11-13)
 
 
